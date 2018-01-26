@@ -49,6 +49,11 @@
   <ItemGroup>
     <Compile Include="Context\ApplicationContextDb.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Migrations\201801261836067_CreatingDB.cs" />
+    <Compile Include="Migrations\201801261836067_CreatingDB.Designer.cs">
+      <DependentUpon>201801261836067_CreatingDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +63,11 @@
   <ItemGroup>
     <Folder Include="Application\" />
     <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801261836067_CreatingDB.resx">
+      <DependentUpon>201801261836067_CreatingDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
